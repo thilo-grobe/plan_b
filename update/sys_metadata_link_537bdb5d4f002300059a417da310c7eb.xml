@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>1fc213d54f002300059a417da310c732</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_0555_plan_b_car_class">
+    <x_0555_plan_b_car_class action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <average_gross_list_price>60000</average_gross_list_price>
+        <average_monthly_fuel_cost>215</average_monthly_fuel_cost>
+        <average_monthly_insurance_cost>65</average_monthly_insurance_cost>
+        <average_monthly_service_fee>30</average_monthly_service_fee>
+        <average_monthly_tax_cost>18</average_monthly_tax_cost>
+        <average_monthly_tire_cost>25</average_monthly_tire_cost>
+        <average_monthly_total>813</average_monthly_total>
+        <monthly_leasing_allowance>460</monthly_leasing_allowance>
+        <name>Middleclass</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 07:09:33</sys_created_on>
+        <sys_id>1fc213d54f002300059a417da310c732</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-20 07:46:26</sys_updated_on>
+    </x_0555_plan_b_car_class>
+    <fx_price action="delete_multiple" query="id=1fc213d54f002300059a417da310c732"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>60000</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>average_gross_list_price</field>
+        <id>1fc213d54f002300059a417da310c732</id>
+        <parent/>
+        <reference_amount>68346</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 07:09:33</sys_created_on>
+        <sys_id>53c213d54f002300059a417da310c733</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-20 07:45:36</sys_updated_on>
+        <table>x_0555_plan_b_car_class</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>215</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>average_monthly_fuel_cost</field>
+        <id>1fc213d54f002300059a417da310c732</id>
+        <parent/>
+        <reference_amount>244.9065</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 07:09:33</sys_created_on>
+        <sys_id>13c213d54f002300059a417da310c738</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-20 07:46:26</sys_updated_on>
+        <table>x_0555_plan_b_car_class</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>65</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>average_monthly_insurance_cost</field>
+        <id>1fc213d54f002300059a417da310c732</id>
+        <parent/>
+        <reference_amount>74.0415</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 07:09:33</sys_created_on>
+        <sys_id>93c213d54f002300059a417da310c739</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-20 07:46:26</sys_updated_on>
+        <table>x_0555_plan_b_car_class</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>30</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>average_monthly_service_fee</field>
+        <id>1fc213d54f002300059a417da310c732</id>
+        <parent/>
+        <reference_amount>34.173</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 07:09:33</sys_created_on>
+        <sys_id>9bc213d54f002300059a417da310c734</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-20 07:46:26</sys_updated_on>
+        <table>x_0555_plan_b_car_class</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>18</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>average_monthly_tax_cost</field>
+        <id>1fc213d54f002300059a417da310c732</id>
+        <parent/>
+        <reference_amount>20.5038</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 07:09:33</sys_created_on>
+        <sys_id>d3c29bd54f002300059a417da310c718</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-20 07:46:26</sys_updated_on>
+        <table>x_0555_plan_b_car_class</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>25</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>average_monthly_tire_cost</field>
+        <id>1fc213d54f002300059a417da310c732</id>
+        <parent/>
+        <reference_amount>28.4775</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 07:09:33</sys_created_on>
+        <sys_id>1fc213d54f002300059a417da310c735</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-20 07:46:26</sys_updated_on>
+        <table>x_0555_plan_b_car_class</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>813</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>average_monthly_total</field>
+        <id>1fc213d54f002300059a417da310c732</id>
+        <parent/>
+        <reference_amount>926.0883</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 07:09:33</sys_created_on>
+        <sys_id>9fc213d54f002300059a417da310c736</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-20 07:46:26</sys_updated_on>
+        <table>x_0555_plan_b_car_class</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>460</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>monthly_leasing_allowance</field>
+        <id>1fc213d54f002300059a417da310c732</id>
+        <parent/>
+        <reference_amount>523.986</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 07:09:33</sys_created_on>
+        <sys_id>17c213d54f002300059a417da310c73a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-20 07:46:26</sys_updated_on>
+        <table>x_0555_plan_b_car_class</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 07:47:31</sys_created_on>
+        <sys_id>537bdb5d4f002300059a417da310c7eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Middleclass</sys_name>
+        <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
+        <sys_update_name>sys_metadata_link_537bdb5d4f002300059a417da310c7eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-20 07:47:31</sys_updated_on>
+        <tablename>x_0555_plan_b_car_class</tablename>
+    </sys_metadata_link>
+</record_update>
