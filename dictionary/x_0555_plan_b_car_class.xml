@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Company Car Classification" max_length="40" name="x_0555_plan_b_car_class" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Average Gross List Price" max_length="20" name="average_gross_list_price" type="price"/>
+        <element label="Average Monthly Fuel Cost" max_length="20" name="average_monthly_fuel_cost" type="price"/>
+        <element label="Average Monthly Insurance Cost" max_length="20" name="average_monthly_insurance_cost" type="price"/>
+        <element label="Average Monthly Service Fee" max_length="20" name="average_monthly_service_fee" type="price"/>
+        <element label="Average Monthly Tax Cost" max_length="20" name="average_monthly_tax_cost" type="price"/>
+        <element label="Average Monthly Tire Cost" max_length="20" name="average_monthly_tire_cost" type="price"/>
+        <element label="Average Monthly Total" max_length="20" name="average_monthly_total" type="price"/>
+        <element label="Monthly Leasing Allowance" max_length="20" name="monthly_leasing_allowance" type="price"/>
+        <element label="Name" max_length="255" name="name" type="string_full_utf8"/>
+    </element>
+</database>

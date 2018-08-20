@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Employee" max_length="40" name="x_0555_plan_b_employee" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="End Date" max_length="40" name="end_date" type="glide_date"/>
+        <element label="First Name" max_length="255" name="first_name" type="string_full_utf8"/>
+        <element label="Health Insurance" max_length="32" name="health_insurance" reference="x_0555_plan_b_health_insurance" type="reference"/>
+        <element label="Last Name" max_length="255" name="last_name" type="string_full_utf8"/>
+        <element label="Monthly Salary" max_length="20" name="monthly_salary" type="price"/>
+        <element label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+        <index name="index">
+            <element name="health_insurance"/>
+        </index>
+    </element>
+</database>

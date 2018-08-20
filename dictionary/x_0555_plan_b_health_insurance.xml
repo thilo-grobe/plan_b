@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Health Insurance" max_length="40" name="x_0555_plan_b_health_insurance" type="collection">
+        <element label="Name" max_length="255" name="name" type="string_full_utf8"/>
+    </element>
+</database>
