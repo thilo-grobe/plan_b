@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>3bf973954f802300059a417da310c76a</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_0555_plan_b_social_security_contributions">
+    <x_0555_plan_b_social_security_contributions action="INSERT_OR_UPDATE">
+        <health_insurance>7.3</health_insurance>
+        <nursing_care_insurance>1.275</nursing_care_insurance>
+        <retirement_insurance>9.3</retirement_insurance>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 10:00:58</sys_created_on>
+        <sys_id>3bf973954f802300059a417da310c76a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-20 10:00:58</sys_updated_on>
+        <unemployment_insurance>1.5</unemployment_insurance>
+        <year>2018</year>
+    </x_0555_plan_b_social_security_contributions>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 10:01:05</sys_created_on>
+        <sys_id>041ab7554f802300059a417da310c70a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
+        <sys_update_name>sys_metadata_link_041ab7554f802300059a417da310c70a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-20 10:01:05</sys_updated_on>
+        <tablename>x_0555_plan_b_social_security_contributi</tablename>
+    </sys_metadata_link>
+</record_update>
