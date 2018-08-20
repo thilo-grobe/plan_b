@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="billable_days_per_employee" label="Billable Days per Employee" language="en" table="x_0555_plan_b_scenario">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>billable_days_per_employee</element>
+            <help/>
+            <hint/>
+            <label>Billable Days per Employee</label>
+            <language>en</language>
+            <name>x_0555_plan_b_scenario</name>
+            <plural>Billable Days per Employees</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-20 12:18:54</sys_created_on>
+            <sys_id>ae99d8a94fc02300059a417da310c782</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Billable Days per Employee</sys_name>
+            <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
+            <sys_update_name>sys_documentation_x_0555_plan_b_scenario_billable_days_per_employee_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-20 12:18:54</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

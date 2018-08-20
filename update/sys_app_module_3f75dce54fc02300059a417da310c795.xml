@@ -9,33 +9,33 @@
         <hint/>
         <homepage/>
         <image/>
-        <link_type>LIST</link_type>
+        <link_type>SEPARATOR</link_type>
         <map_page/>
-        <mobile_title>Company Car Classifications</mobile_title>
+        <mobile_title>Other Stuff</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name>x_0555_plan_b_car_class</name>
-        <order>2100</order>
+        <name/>
+        <order>2000</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_0555_plan_b.company_car_classification_user</roles>
+        <roles/>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-08-20 06:55:31</sys_created_on>
+        <sys_created_on>2018-08-20 12:01:19</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>a99f03554f002300059a417da310c790</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Company Car Classifications</sys_name>
+        <sys_id>3f75dce54fc02300059a417da310c795</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Other Stuff</sys_name>
         <sys_overrides/>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
-        <sys_update_name>sys_app_module_a99f03554f002300059a417da310c790</sys_update_name>
+        <sys_update_name>sys_app_module_3f75dce54fc02300059a417da310c795</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-20 12:04:44</sys_updated_on>
+        <sys_updated_on>2018-08-20 12:01:19</sys_updated_on>
         <timeline_page/>
-        <title>Company Car Classifications</title>
+        <title>Other Stuff</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

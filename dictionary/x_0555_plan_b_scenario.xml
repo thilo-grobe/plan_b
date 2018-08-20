@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Scenario" max_length="40" name="x_0555_plan_b_scenario" type="collection">
+        <element label="Average Daily Rate" max_length="20" name="average_daily_rate" type="price"/>
+        <element label="Average Travel Cost per Billable Day" max_length="20" name="average_travel_cost_per_billable_day" type="price"/>
+        <element label="Billable Days per Employee" max_length="40" name="billable_days_per_employee" type="integer"/>
+        <element label="Name" max_length="255" name="name" type="string_full_utf8"/>
+        <element label="Remote Work Percentage" max_length="40" name="remote_work_percentage" type="float"/>
+    </element>
+</database>
