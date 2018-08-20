@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Company Levies" max_length="40" name="x_0555_plan_b_levies" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Levy 1 (Percent)" max_length="40" name="levy_1_percent" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Levy 2 (Percent)" max_length="40" name="levy_2_percent" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Levy 3 (Percent)" max_length="40" name="levy_3_percent" type="float"/>
+        <element label="Year" max_length="40" name="year" type="string"/>
+    </element>
+</database>

@@ -4,195 +4,167 @@
             <element>name</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>9db19f954f002300059a417da310c7b1</sys_id>
+            <sys_created_on>2018-08-20 07:04:55</sys_created_on>
+            <sys_id>dfb19f954f002300059a417da310c7c0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
+            <sys_updated_on>2018-08-20 07:04:55</sys_updated_on>
             <sys_user/>
             <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
-            <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>11b19f954f002300059a417da310c7b2</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>active</element>
-            <position>2</position>
+            <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>91b19f954f002300059a417da310c7b2</sys_id>
+            <sys_created_on>2018-08-20 07:04:55</sys_created_on>
+            <sys_id>53b19f954f002300059a417da310c7c1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
+            <sys_updated_on>2018-08-20 07:04:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.end_split</element>
-            <position>3</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>15b19f954f002300059a417da310c7b2</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
-            <sys_user/>
-            <type>.end_split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
-            <position>4</position>
+            <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>95b19f954f002300059a417da310c7b2</sys_id>
+            <sys_created_on>2018-08-20 07:04:55</sys_created_on>
+            <sys_id>d3b19f954f002300059a417da310c7c1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
+            <sys_updated_on>2018-08-20 07:04:55</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>average_gross_list_price</element>
-            <position>5</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>19b19f954f002300059a417da310c7b2</sys_id>
+            <sys_created_on>2018-08-20 07:04:55</sys_created_on>
+            <sys_id>57b19f954f002300059a417da310c7c1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
+            <sys_updated_on>2018-08-20 07:04:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>average_monthly_fuel_cost</element>
-            <position>6</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>99b19f954f002300059a417da310c7b2</sys_id>
+            <sys_created_on>2018-08-20 07:04:55</sys_created_on>
+            <sys_id>d7b19f954f002300059a417da310c7c1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
+            <sys_updated_on>2018-08-20 07:04:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>average_monthly_insurance_cost</element>
-            <position>7</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>1db19f954f002300059a417da310c7b2</sys_id>
+            <sys_created_on>2018-08-20 07:04:55</sys_created_on>
+            <sys_id>5bb19f954f002300059a417da310c7c1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
+            <sys_updated_on>2018-08-20 07:04:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>average_monthly_service_fee</element>
-            <position>8</position>
+            <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>9db19f954f002300059a417da310c7b2</sys_id>
+            <sys_created_on>2018-08-20 07:04:55</sys_created_on>
+            <sys_id>dbb19f954f002300059a417da310c7c1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
+            <sys_updated_on>2018-08-20 07:04:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>9</position>
+            <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>11b19f954f002300059a417da310c7b3</sys_id>
+            <sys_created_on>2018-08-20 07:04:55</sys_created_on>
+            <sys_id>5fb19f954f002300059a417da310c7c1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
+            <sys_updated_on>2018-08-20 07:04:55</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>average_monthly_tax_cost</element>
-            <position>10</position>
+            <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>91b19f954f002300059a417da310c7b3</sys_id>
+            <sys_created_on>2018-08-20 07:04:55</sys_created_on>
+            <sys_id>dfb19f954f002300059a417da310c7c1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
+            <sys_updated_on>2018-08-20 07:04:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>average_monthly_tire_cost</element>
-            <position>11</position>
+            <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>15b19f954f002300059a417da310c7b3</sys_id>
+            <sys_created_on>2018-08-20 07:04:55</sys_created_on>
+            <sys_id>53b19f954f002300059a417da310c7c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
+            <sys_updated_on>2018-08-20 07:04:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>average_monthly_total</element>
-            <position>12</position>
+            <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>95b19f954f002300059a417da310c7b3</sys_id>
+            <sys_created_on>2018-08-20 07:04:55</sys_created_on>
+            <sys_id>d3b19f954f002300059a417da310c7c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
+            <sys_updated_on>2018-08-20 07:04:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>monthly_leasing_allowance</element>
-            <position>13</position>
+            <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
-            <sys_id>19b19f954f002300059a417da310c7b3</sys_id>
+            <sys_created_on>2018-08-20 07:04:55</sys_created_on>
+            <sys_id>57b19f954f002300059a417da310c7c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_car_class" sys_domain="global" view="Default view">11b19f954f002300059a417da310c7ae</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
+            <sys_updated_on>2018-08-20 07:04:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -203,7 +175,7 @@
             <roles/>
             <sys_class_name>sys_ui_section</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 07:04:47</sys_created_on>
+            <sys_created_on>2018-08-20 07:04:55</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>11b19f954f002300059a417da310c7ae</sys_id>
@@ -215,7 +187,7 @@
             <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
             <sys_update_name>sys_ui_section_11b19f954f002300059a417da310c7ae</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 07:04:47</sys_updated_on>
+            <sys_updated_on>2018-08-20 07:04:55</sys_updated_on>
             <sys_user/>
             <title>false</title>
             <view display_value="Default view" name="NULL">Default view</view>

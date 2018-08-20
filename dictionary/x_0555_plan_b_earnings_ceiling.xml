@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Earnings Ceiling" max_length="40" name="x_0555_plan_b_earnings_ceiling" type="collection">
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer,edge_encryption_enabled=true" label="General Earnings Ceiling" max_length="20" name="general_earnings_ceiling" type="price"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer,edge_encryption_enabled=true" label="Health Insurance Ceiling" max_length="20" name="health_insurance_ceiling" type="price"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer,edge_encryption_enabled=true" label="Retirement Insurance Ceiling" max_length="20" name="retirement_insurance_ceiling" type="price"/>
+        <element label="Year" mandatory="true" max_length="255" name="year" type="string_full_utf8" unique="true"/>
+        <index name="index">
+            <element name="year"/>
+        </index>
+    </element>
+</database>

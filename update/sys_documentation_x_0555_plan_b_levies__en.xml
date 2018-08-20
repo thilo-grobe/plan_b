@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Company Levies" language="en" table="x_0555_plan_b_levies">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Company Levies</label>
+            <language>en</language>
+            <name>x_0555_plan_b_levies</name>
+            <plural>Company Levies</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-20 08:30:48</sys_created_on>
+            <sys_id>5965e3154f402300059a417da310c767</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Company Levies</sys_name>
+            <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
+            <sys_update_name>sys_documentation_x_0555_plan_b_levies__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-20 08:30:48</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

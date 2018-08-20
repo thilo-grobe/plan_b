@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Social Security Contributions" max_length="40" name="x_0555_plan_b_social_security_contributions" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Health Insurance" max_length="40" name="health_insurance" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Nursing Care Insurance" max_length="40" name="nursing_care_insurance" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Retirement Insurance" max_length="40" name="retirement_insurance" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Unemployment Insurance" max_length="40" name="unemployment_insurance" type="float"/>
+        <element label="Year" max_length="255" name="year" type="string_full_utf8"/>
+    </element>
+</database>

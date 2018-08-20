@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Regional Tax Rate" max_length="40" name="x_0555_plan_b_regional_tax_rate" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Base Rate" max_length="40" name="base_rate" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Corporate Tax Rate (Percent)" max_length="40" name="corporate_tax_rate_percent" type="float"/>
+        <element label="Name" max_length="255" name="name" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" label="Solidarity Tax Contribution Rate" max_length="40" name="solidarity_tax_contribution_rate" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Tax Factor" max_length="40" name="tax_factor" type="float"/>
+        <element label="Year" max_length="255" name="year" type="string_full_utf8"/>
+    </element>
+</database>
