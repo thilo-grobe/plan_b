@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">a2687ac64f402300059a417da310c757</sp_column>
+        <sp_widget display_value="Scenario Details">4ee7f6864f402300059a417da310c7b4</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-22 13:09:57</sys_created_on>
+        <sys_id>bd78f6c64f402300059a417da310c7e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
+        <sys_update_name>sp_instance_bd78f6c64f402300059a417da310c7e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-22 13:09:57</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=bd78f6c64f402300059a417da310c7e4"/>
+</record_update>

@@ -4,6 +4,7 @@
         <element label="Average Travel Cost per Billable Day" max_length="20" name="average_travel_cost_per_billable_day" type="price"/>
         <element label="Billable Days per Employee" max_length="40" name="billable_days_per_employee" type="integer"/>
         <element label="Name" max_length="255" name="name" type="string_full_utf8"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Remote Work Percentage" max_length="40" name="remote_work_percentage" type="float"/>
     </element>
 </database>
