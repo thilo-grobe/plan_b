@@ -4,6 +4,7 @@
         <client_script><![CDATA[function($scope) {
   /* widget controller */
   var c = this;
+	c.show = true;
 	
 	$scope.$on('resultsCalculated', function(event, result) {	
 		c.result = result;
@@ -43,7 +44,7 @@
 	var gr = new GlideRecord('x_0555_plan_b_employee');
 	gr.query();
 	if (gr.next()) {
-		data.other = gr.monthly_salary.getReferenceValue();
+		data.other = gr.monthly_salary.getCurrencyString();
 	} else data.other = ':('
 	
 })();]]></script>
@@ -52,14 +53,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-08-23 07:53:20</sys_created_on>
         <sys_id>a1993e5e4f002300059a417da310c7d8</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Calculation Debug</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
         <sys_update_name>sp_widget_a1993e5e4f002300059a417da310c7d8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-23 10:19:58</sys_updated_on>
+        <sys_updated_on>2018-08-23 10:43:25</sys_updated_on>
         <template><![CDATA[<div ng-if="c.data.debug" ng-show="c.show" class="panel panel-default b">
   <div class="panel-heading">
     <h2 class="h4 panel-title">
@@ -68,6 +69,9 @@
   </div>
   <div class="panel-body">
     <pre>{{c.result|json}}</pre>
+    <h2>
+      Other Debug Data
+    </h2>
     <pre>{{c.data.other|json}}</pre>
   </div>
 </div>
