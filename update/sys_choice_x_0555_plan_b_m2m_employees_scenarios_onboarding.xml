@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="onboarding" table="x_0555_plan_b_m2m_employees_scenarios" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>onboarding</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Day 1</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 10:01:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>19d617564f802300059a417da310c74b</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 10:03:12</sys_updated_on>
+            <value>0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>onboarding</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>+1 month</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 10:01:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d0f617564f802300059a417da310c7c0</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 10:02:17</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>onboarding</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>+2 months</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 10:01:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a407d3564f802300059a417da310c7d5</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 10:02:20</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>onboarding</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>+3 months</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>4</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 10:02:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ce0717564f802300059a417da310c77a</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 10:02:22</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>onboarding</element>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 10:01:33</sys_created_on>
+            <sys_id>bfe617564f802300059a417da310c76f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>onboarding</sys_name>
+            <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
+            <sys_update_name>sys_choice_x_0555_plan_b_m2m_employees_scenarios_onboarding</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 10:01:33</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

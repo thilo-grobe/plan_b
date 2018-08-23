@@ -2,15 +2,35 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
         <client_script><![CDATA[function($scope) {
-  /* widget controller */
-  var c = this;
-	
-	c.calcScenario = '';
-	
-	c.change = function(scenario_id){
-		$rootScope.$broadcast('scenario_changed', scenario_id);
-		console.log('scenario changed to: '+scenario_id);
-	}	
+	/* widget controller */
+	var c = this;
+
+	c.calculate = function() {
+		c.data.calcScenario = c.data.selectedScenarioId;
+		console.log('calc function in action widget called');
+		$scope.server.update().then(function(response) {
+			console.log('received response');
+			console.log('Result from Response:' +JSON.stringify(c.data.result));
+			$rootScope.$broadcast('resultsCalculated', c.data.result);
+		}) ;
+	};
+
+	c.edit = function() {
+		console.log('edit function in action widget called');
+	};
+
+	c.del = function() {
+		console.log('delete function in action widget called');
+	};
+
+	$scope.$on('scenario_changed', function(event, scenario_id) {	
+		c.data.selectedScenarioId = scenario_id;
+		if (scenario_id != '') {
+			c.show = true;
+		} else c.show = false;
+	})
+
+
 }]]></client_script>
         <controller_as>c</controller_as>
         <css/>
@@ -28,49 +48,56 @@
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
-  /* populate the 'data' object */
-  /* e.g., data.table = $sp.getValue('table'); */
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
 
-	data.scenarios = [];
-	
-	if (input && input.calcScenario) {
-		var cal = new x_0555_plan_b.ScenarioCalculator() 
-		}
-	
-	var gr = new GlideRecord('x_0555_plan_b_scenario');
-	gr.query();
-	while(gr.next()){
-		var obj = {name : gr.number.toString()+' - '+gr.name.toString(), sys_id : gr.sys_id.toString()};
-		data.scenarios.push(obj);
+	if (gs.getProperty('x_0555_plan_b.logging.verbosity') == 'debug') {
+		data.debug = true;
 	}
-	
-	
-	
+
+	data.result = {};
+
+	if (input && input.calcScenario) {
+		data.result = new x_0555_plan_b.ScenarioCalculator().calculate(input.calcScenario);
+		console.log('Server result: '+JSON.stringify(data.result));
+	}
+
+
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-08-22 14:36:25</sys_created_on>
         <sys_id>644ccb824f802300059a417da310c706</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>53</sys_mod_count>
         <sys_name>Scenario Actions</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
         <sys_update_name>sp_widget_644ccb824f802300059a417da310c706</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-23 08:08:44</sys_updated_on>
-        <template><![CDATA[<div class="panel panel-default">
+        <sys_updated_on>2018-08-23 09:25:31</sys_updated_on>
+        <template><![CDATA[<div ng-show="c.show" class="panel panel-default">
   <div class="panel-heading">
     <h2 class="h4 panel-title">
       <fa class="m-r-sm fa fa-wrench" />${Actions}
     </h2>
   </div>
   <div class="panel-body">
-    <button class="btn btn-primary"><fa class="fa fa-edit" /></button>
-    <button class="btn btn-primary"><fa class="fa fa-trash" /></button>
-    <button class="btn btn-warning pull-right"><fa class="fa-magic" />&nbsp;${Calculate}</button>
+    <button ng-click="c.edit()" class="btn btn-primary"><fa class="fa fa-edit" /></button>
+    <button ng-click="c.del()" class="btn btn-primary"><fa class="fa fa-trash" /></button>
+    <button ng-click="c.calculate()" class="btn btn-warning pull-right"><fa class="fa-magic" />&nbsp;${Calculate}</button>
+  
+    <div ng-if='data.debug'>
+      <h4>
+        Debug Info Data
+      </h4>
+      <pre>{{c.data.result | json}}
+    </pre>
+    </div>
+  
   </div>
+  
 </div>
 ]]></template>
     </sp_widget>

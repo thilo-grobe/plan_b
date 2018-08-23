@@ -21,9 +21,9 @@ ScenarioCalculator.prototype = {
 	
 		if(gr.get(input.selectedScenarioId)) {
 			result.state = "success";
-			result = addSpendings(result);
-			result = addEarnings(result);
-			result = addBottomLineCalculation(result);
+			result = this._addSpendings(result);
+			result = this._addEarnings(result);
+			result = this._addBottomLineCalculation(result);
 		} else {
 			result.state = "error";
 			result.messages.push("Scenario not found or not accessible");
@@ -31,6 +31,20 @@ ScenarioCalculator.prototype = {
 		
 		return result;
 	},
+	
+	_addSpendings: function(result) {
+		return result;
+	},
+	
+	_addEarnings: function(result) {
+		return result;
+	},
+	
+	_addBottomLineCalculation: function(result) {
+		return result;
+	},
+	
+
 
 	type: 'ScenarioCalculator'
 };]]></script>
@@ -38,13 +52,13 @@ ScenarioCalculator.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-08-23 07:51:18</sys_created_on>
         <sys_id>32173e9e4f002300059a417da310c709</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>ScenarioCalculator</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
         <sys_update_name>sys_script_include_32173e9e4f002300059a417da310c709</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-23 07:51:18</sys_updated_on>
+        <sys_updated_on>2018-08-23 08:53:19</sys_updated_on>
     </sys_script_include>
 </record_update>

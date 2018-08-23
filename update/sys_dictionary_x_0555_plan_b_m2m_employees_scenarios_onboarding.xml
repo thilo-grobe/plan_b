@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="monthly_salary" table="x_0555_plan_b_employee">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="onboarding" table="x_0555_plan_b_m2m_employees_scenarios">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -11,13 +11,13 @@
 	return '';  // return the calculated value
 
 })(current);]]></calculation>
-        <choice/>
+        <choice>3</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Current Monthly Salary</column_label>
+        <column_label>Onboarding</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>0</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -27,15 +27,15 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>monthly_salary</element>
+        <element>onboarding</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Price">price</internal_type>
+        <internal_type display_value="Choice">choice</internal_type>
         <mandatory>false</mandatory>
-        <max_length>20</max_length>
-        <name>x_0555_plan_b_employee</name>
+        <max_length>40</max_length>
+        <name>x_0555_plan_b_m2m_employees_scenarios</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -52,16 +52,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-08-20 06:50:03</sys_created_on>
-        <sys_id>4e4773514f802300059a417da310c757</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Current Monthly Salary</sys_name>
+        <sys_created_on>2018-08-23 09:51:10</sys_created_on>
+        <sys_id>7303d3524f802300059a417da310c75b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Onboarding</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
-        <sys_update_name>sys_dictionary_x_0555_plan_b_employee_monthly_salary</sys_update_name>
+        <sys_update_name>sys_dictionary_x_0555_plan_b_m2m_employees_scenarios_onboarding</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-23 10:09:35</sys_updated_on>
+        <sys_updated_on>2018-08-23 10:02:47</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

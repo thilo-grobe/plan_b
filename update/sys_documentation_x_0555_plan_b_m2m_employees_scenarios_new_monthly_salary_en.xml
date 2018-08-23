@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="new_monthly_salary" label="New Monthly Salary" language="en" table="x_0555_plan_b_m2m_employees_scenarios">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>new_monthly_salary</element>
+            <help/>
+            <hint/>
+            <label>New Monthly Salary</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <plural>New Monthly Salaries</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 10:06:57</sys_created_on>
+            <sys_id>722897964f802300059a417da310c753</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>New Monthly Salary</sys_name>
+            <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
+            <sys_update_name>sys_documentation_x_0555_plan_b_m2m_employees_scenarios_new_monthly_salary_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 10:06:57</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

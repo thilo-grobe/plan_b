@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="billable_utilization" table="x_0555_plan_b_m2m_employees_scenarios" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>0%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:49:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>661497d24f802300059a417da310c765</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:49:35</sys_updated_on>
+            <value>0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>5%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:49:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>504453d24f802300059a417da310c705</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:49:50</sys_updated_on>
+            <value>0.05</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>10%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:50:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fa44d7d24f802300059a417da310c74c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:50:01</sys_updated_on>
+            <value>0.1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>15%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>4</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:51:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>328493d24f802300059a417da310c7d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:51:06</sys_updated_on>
+            <value>0.15</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>20%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>5</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:51:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cf9413d24f802300059a417da310c762</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:51:23</sys_updated_on>
+            <value>0.2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>25%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>6</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:51:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e8b417d24f802300059a417da310c723</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:51:46</sys_updated_on>
+            <value>0.25</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>30%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>7</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:52:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3ec41fd24f802300059a417da310c787</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 10:00:03</sys_updated_on>
+            <value>0.3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>35%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>8</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:54:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>15355fd24f802300059a417da310c780</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:54:00</sys_updated_on>
+            <value>0.35</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>9</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:54:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>00455fd24f802300059a417da310c785</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 10:00:06</sys_updated_on>
+            <value>0.4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>45%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>10</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:54:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ec55d3164f802300059a417da310c721</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:54:30</sys_updated_on>
+            <value>0.45</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>50%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>11</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:54:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ef55d3164f802300059a417da310c726</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 10:00:08</sys_updated_on>
+            <value>0.5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>55%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>12</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:54:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>836557164f802300059a417da310c7cb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:54:56</sys_updated_on>
+            <value>0.55</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>60%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>13</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:55:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e67513164f802300059a417da310c7ab</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 10:00:10</sys_updated_on>
+            <value>0.6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>65%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>14</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:55:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7e85d3164f802300059a417da310c788</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:55:28</sys_updated_on>
+            <value>0.65</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>70%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>15</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:55:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9e959fd24f802300059a417da310c7ea</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 10:00:14</sys_updated_on>
+            <value>0.7</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>75%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>16</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:55:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>29a59fd24f802300059a417da310c7f0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:55:56</sys_updated_on>
+            <value>0.75</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>80%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>17</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:56:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8eb593164f802300059a417da310c7ef</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 10:00:15</sys_updated_on>
+            <value>0.8</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>85%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>18</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:56:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b9c557164f802300059a417da310c7d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:56:30</sys_updated_on>
+            <value>0.85</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>90%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>19</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:56:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>add59b164f802300059a417da310c743</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 10:00:20</sys_updated_on>
+            <value>0.9</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>95%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>20</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:56:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>30e59b164f802300059a417da310c74a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:56:59</sys_updated_on>
+            <value>0.95</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>100%</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>21</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:59:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>73461b164f802300059a417da310c72b</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:59:55</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>billable_utilization</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1005</label>
+            <language>en</language>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sequence>21</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:57:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d5f5db164f802300059a417da310c787</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:57:16</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>billable_utilization</element>
+            <name>x_0555_plan_b_m2m_employees_scenarios</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-23 09:49:35</sys_created_on>
+            <sys_id>603497d24f802300059a417da310c76a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>billable_utilization</sys_name>
+            <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
+            <sys_update_name>sys_choice_x_0555_plan_b_m2m_employees_scenarios_billable_utilization</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-23 09:49:35</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

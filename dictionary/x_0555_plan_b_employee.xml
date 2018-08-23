@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Employee" max_length="40" name="x_0555_plan_b_employee" type="collection">
         <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
-        <element label="End Date" max_length="40" name="end_date" type="glide_date"/>
         <element label="First Name" max_length="255" name="first_name" type="string_full_utf8"/>
         <element label="Last Name" max_length="255" name="last_name" type="string_full_utf8"/>
-        <element label="Monthly Salary" max_length="20" name="monthly_salary" type="price"/>
+        <element label="Current Monthly Salary" max_length="20" name="monthly_salary" type="price"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.first_name+' '+current.last_name;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Name" max_length="255" name="name" type="string_full_utf8" virtual="true"/>
-        <element label="Start Date" max_length="40" name="start_date" type="glide_date"/>
     </element>
 </database>

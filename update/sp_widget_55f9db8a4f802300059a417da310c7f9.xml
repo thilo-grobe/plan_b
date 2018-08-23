@@ -5,7 +5,7 @@
   /* widget controller */
   var c = this;
 	//test
-	c.result = data.result;
+	c.result = c.data.result;
 	
 	$scope.$on('calculation complete', function(event, result) {	
 		c.result = result;
@@ -72,14 +72,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-08-22 15:36:16</sys_created_on>
         <sys_id>55f9db8a4f802300059a417da310c7f9</sys_id>
-        <sys_mod_count>66</sys_mod_count>
+        <sys_mod_count>68</sys_mod_count>
         <sys_name>Spendings</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
         <sys_update_name>sp_widget_55f9db8a4f802300059a417da310c7f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-23 08:09:22</sys_updated_on>
+        <sys_updated_on>2018-08-23 09:39:15</sys_updated_on>
         <template><![CDATA[<div class="panel panel-danger">
 
   <div class="panel-heading">
@@ -95,18 +95,18 @@
     </tr>
     <tr>
       <td>Salaries</td>
-      <td><span class="pull-right">200.000€</span></td>
+      <td><span class="pull-right">200.000,00€</span></td>
     </tr>
     <tr>
       <td>Rent</td>
-      <td><span class="pull-right">20.000€</span></td>
+      <td><span class="pull-right">20.000,00€</span></td>
     </tr>
   </table>
 
   <div class="panel-footer plan_b_footer">
     <span class="pull-right">Total 1yr Spendings:&nbsp;
       <span class="total">
-        220.000€
+        220.000,00€
       </span>
     </span>
   </div>
