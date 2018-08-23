@@ -6,27 +6,27 @@
         <css/>
         <glyph/>
         <id/>
-        <order>2</order>
+        <order>1</order>
         <roles/>
         <short_description/>
         <size>md</size>
-        <sp_column display_value="1">a6687ac64f402300059a417da310c755</sp_column>
-        <sp_widget display_value="Scenario Actions">644ccb824f802300059a417da310c706</sp_widget>
+        <sp_column display_value="1">440f7ed24f402300059a417da310c7a8</sp_column>
+        <sp_widget display_value="Scenario Editor">bf63dc654fc02300059a417da310c783</sp_widget>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-08-22 14:37:45</sys_created_on>
-        <sys_id>0c9c8fc64f402300059a417da310c7a0</sys_id>
+        <sys_created_on>2018-08-23 08:17:08</sys_created_on>
+        <sys_id>da0fbe924f402300059a417da310c785</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
-        <sys_update_name>sp_instance_0c9c8fc64f402300059a417da310c7a0</sys_update_name>
+        <sys_update_name>sp_instance_da0fbe924f402300059a417da310c785</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-22 14:37:45</sys_updated_on>
+        <sys_updated_on>2018-08-23 08:17:08</sys_updated_on>
         <title/>
         <url/>
         <widget_parameters/>
     </sp_instance>
-    <sys_translated_text action="delete_multiple" query="documentkey=0c9c8fc64f402300059a417da310c7a0"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=da0fbe924f402300059a417da310c785"/>
 </record_update>

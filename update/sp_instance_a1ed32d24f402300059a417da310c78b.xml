@@ -10,23 +10,23 @@
         <roles/>
         <short_description/>
         <size>md</size>
-        <sp_column display_value="1">a6687ac64f402300059a417da310c755</sp_column>
-        <sp_widget display_value="Scenario Editor">bf63dc654fc02300059a417da310c783</sp_widget>
+        <sp_column display_value="1">badd3e924f402300059a417da310c791</sp_column>
+        <sp_widget display_value="Spendings">55f9db8a4f802300059a417da310c7f9</sp_widget>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-08-22 11:23:24</sys_created_on>
-        <sys_id>8910ea864f002300059a417da310c71f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_created_on>2018-08-23 08:12:10</sys_created_on>
+        <sys_id>a1ed32d24f402300059a417da310c78b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
-        <sys_update_name>sp_instance_8910ea864f002300059a417da310c71f</sys_update_name>
+        <sys_update_name>sp_instance_a1ed32d24f402300059a417da310c78b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-22 13:09:49</sys_updated_on>
+        <sys_updated_on>2018-08-23 08:12:10</sys_updated_on>
         <title/>
         <url/>
         <widget_parameters/>
     </sp_instance>
-    <sys_translated_text action="delete_multiple" query="documentkey=8910ea864f002300059a417da310c71f"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=a1ed32d24f402300059a417da310c78b"/>
 </record_update>

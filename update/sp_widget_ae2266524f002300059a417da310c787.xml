@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope) {
+  /* widget controller */
+  var c = this;
+	
+	//'labels' contain all criticality levels, can be mapped to 'data_chartjs'
+	//$scope.labels = c.data.labels;
+	//'data_chartjs' stores number of all findings to one criticality level
+	//$scope.data_chartjs = c.data.chartData;
+	$scope.labels = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+  $scope.series = ['Earnings', 'Spendings'/*, "Cashflow"*/];
+	$scope.chartData = [
+    [0, 0, 50, 70, 80, 100, 110, 110, 110, 110, 110, 110],
+    [50, 50, 60, 60, 60, 65, 65, 65, 65, 65, 65, 65]/*,
+		[-50, -50, -10, 10, 20, 35, 45, 45, 45, 45, 45, 45]*/
+  ];
+	/*$scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
+  $scope.options = {
+    scales: {
+      yAxes: [
+        {
+          id: 'y-axis-1',
+          type: 'linear',
+          display: true,
+          position: 'left'
+        },
+        {
+          id: 'y-axis-2',
+          type: 'linear',
+          display: true,
+          position: 'right'
+        }
+      ]
+    }
+  };*/
+	
+	
+	$scope.$on('scenario_changed', function(event, scenario_id) {	
+		c.data.selectedScenarioId = scenario_id;
+		$scope.server.update();
+  });
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>timechart</id>
+        <internal>false</internal>
+        <link/>
+        <name>Timechart</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+  if (gs.getProperty('x_0555_plan_b.logging.verbosity') == 'debug') {
+		data.debug = true;
+	}
+	
+	
+	
+	
+	data.spendings = {};
+	
+	if (input) {
+		var gr = new GlideRecord('x_0555_plan_b_scenario');
+		if(gr.get(input.selected_scenario_id)) {
+			data.scenario.number = gr.getDisplayValue('number');
+			data.scenario.name = gr.getDisplayValue('name');
+		}
+	}
+
+	
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-23 06:11:00</sys_created_on>
+        <sys_id>ae2266524f002300059a417da310c787</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Timechart</sys_name>
+        <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
+        <sys_update_name>sp_widget_ae2266524f002300059a417da310c787</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-23 06:46:03</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="h4 panel-title">
+      <fa class="m-r-sm fa fa-dollar" />${Cashflow Timeline}
+    </h2>
+  </div>
+  <div class="panel-body">
+    <canvas id="line" 
+            class="chart chart-line" 
+            chart-data="chartData"
+            chart-labels="labels" 
+            chart-series="series" 
+            chart-options="options"
+            chart-dataset-override="datasetOverride" 
+            chart-click="onClick"
+            chart-height="100">
+    </canvas>
+
+    <div ng-if='data.debug'>
+      <h4>
+        Debug Info Data
+      </h4>
+      <pre>{{c.data.spendings | json}}</pre>
+    </div>
+  </div>
+
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

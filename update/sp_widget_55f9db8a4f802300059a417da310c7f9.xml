@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope) {
+  /* widget controller */
+  var c = this;
+	//test
+	c.result = data.result;
+	
+	$scope.$on('calculation complete', function(event, result) {	
+		c.result = result;
+		$scope.server.update();
+  });
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.total {
+  font-size: 150%;
+  font-weight: bolder;
+  color: $danger
+}
+
+.plan_b_footer {
+  height: 55px
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>spendings</id>
+        <internal>false</internal>
+        <link/>
+        <name>Spendings</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+	if (gs.getProperty('x_0555_plan_b.logging.verbosity') == 'debug') {
+		data.debug = false;
+	}
+  data.result = {};
+	data.result.total = "375.000€";
+	data.result.spendings = [
+		{
+			"Order": "1",
+			"Label": "Staff",
+			"Amount": "250.000€"
+		},
+		{
+			"Order": "2",
+			"Label": "Office Lease",
+			"Amount": "25.000€"
+		},
+		{
+			"Order": "3",
+			"Label": "Office IT",
+			"Amount": "20.000€"
+		},
+		{
+			"Order": "4",
+			"Label": "Travel",
+			"Amount": "50.000€"
+		}
+	];
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-22 15:36:16</sys_created_on>
+        <sys_id>55f9db8a4f802300059a417da310c7f9</sys_id>
+        <sys_mod_count>66</sys_mod_count>
+        <sys_name>Spendings</sys_name>
+        <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
+        <sys_update_name>sp_widget_55f9db8a4f802300059a417da310c7f9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-23 08:09:22</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-danger">
+
+  <div class="panel-heading">
+    <h2 class="h4 panel-title">
+      <fa class="m-r-sm fa fa-info-circle" />${1yr Spendings}
+    </h2>
+  </div>
+
+  <table class="table">
+    <tr>
+      <th>Cost Type</th>
+      <th><span class="pull-right">Amount</span></th>
+    </tr>
+    <tr>
+      <td>Salaries</td>
+      <td><span class="pull-right">200.000€</span></td>
+    </tr>
+    <tr>
+      <td>Rent</td>
+      <td><span class="pull-right">20.000€</span></td>
+    </tr>
+  </table>
+
+  <div class="panel-footer plan_b_footer">
+    <span class="pull-right">Total 1yr Spendings:&nbsp;
+      <span class="total">
+        220.000€
+      </span>
+    </span>
+  </div>
+
+</div>
+
+]]></template>
+    </sp_widget>
+</record_update>
