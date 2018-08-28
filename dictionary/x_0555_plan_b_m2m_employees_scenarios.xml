@@ -26,6 +26,9 @@
                 <element inactive_on_update="false" label="1005" sequence="21" value="1"/>
             </choice>
         </element>
+        <element choice="1" label="Company Car" max_length="40" name="company_car" reference="x_0555_plan_b_car_class" type="reference">
+            <choice/>
+        </element>
         <element label="Employee" max_length="32" name="employee" reference="x_0555_plan_b_employee" type="reference"/>
         <element default="EUR;100" label="Hourly Rate" max_length="20" name="hourly_rate" type="price"/>
         <element label="New Monthly Salary" max_length="20" name="new_monthly_salary" type="price"/>

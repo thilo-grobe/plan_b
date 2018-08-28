@@ -2,45 +2,52 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
         <client_script><![CDATA[function($scope) {
-  /* widget controller */
-  var c = this;
-	
-	//'labels' contain all criticality levels, can be mapped to 'data_chartjs'
-	//$scope.labels = c.data.labels;
-	//'data_chartjs' stores number of all findings to one criticality level
-	//$scope.data_chartjs = c.data.chartData;
-	$scope.labels = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
-  $scope.series = ['Earnings', 'Spendings'/*, "Cashflow"*/];
-	$scope.chartData = [
-    [0, 0, 50, 70, 80, 100, 110, 110, 110, 110, 110, 110],
-    [50, 50, 60, 60, 60, 65, 65, 65, 65, 65, 65, 65]/*,
+	/* widget controller */
+	var c = this;
+
+	$scope.$on('resultsCalculated', function(event, result) {	
+		c.result = result;
+
+		//'labels' contain all criticality levels, can be mapped to 'data_chartjs'
+		//$scope.labels = c.data.labels;
+		//'data_chartjs' stores number of all findings to one criticality level
+		//$scope.data_chartjs = c.data.chartData;
+		$scope.labels = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+		$scope.series = ['Earnings', 'Spendings'/*, "Cashflow"*/];
+		$scope.chartData = [
+			c.result.earnings.monthly.value,
+			c.result.spendings.monthly.value/*,
 		[-50, -50, -10, 10, 20, 35, 45, 45, 45, 45, 45, 45]*/
-  ];
-	/*$scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
-  $scope.options = {
-    scales: {
-      yAxes: [
-        {
-          id: 'y-axis-1',
-          type: 'linear',
-          display: true,
-          position: 'left'
-        },
-        {
-          id: 'y-axis-2',
-          type: 'linear',
-          display: true,
-          position: 'right'
-        }
-      ]
-    }
-  };*/
-	
-	
-	$scope.$on('scenario_changed', function(event, scenario_id) {	
-		c.data.selectedScenarioId = scenario_id;
-		$scope.server.update();
-  });
+		];
+		$scope.colours = [ '#008000', '#ff0000'];
+
+		$scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
+		$scope.options = {
+			scales: {
+				yAxes: [
+					{
+						id: 'y-axis-1',
+						type: 'linear',
+						display: true,
+						position: 'left'
+					},
+					{
+						id: 'y-axis-2',
+						type: 'linear',
+						display: true,
+						position: 'right'
+					}
+				]
+			}
+		};
+
+
+
+
+
+		//$scope.server.update();
+	});
+
 }]]></client_script>
         <controller_as>c</controller_as>
         <css/>
@@ -85,18 +92,18 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-08-23 06:11:00</sys_created_on>
         <sys_id>ae2266524f002300059a417da310c787</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_name>Timechart</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
         <sys_update_name>sp_widget_ae2266524f002300059a417da310c787</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-23 06:46:03</sys_updated_on>
-        <template><![CDATA[<div class="panel panel-default">
+        <sys_updated_on>2018-08-28 18:57:49</sys_updated_on>
+        <template><![CDATA[<div ng-if="c.result" class="panel panel-default">
   <div class="panel-heading">
     <h2 class="h4 panel-title">
-      <fa class="m-r-sm fa fa-dollar" />${Cashflow Timeline}
+      <fa class="m-r-sm fa fa-dollar" />${12 month Cashflow Timeline}
     </h2>
   </div>
   <div class="panel-body">
@@ -106,6 +113,7 @@
             chart-labels="labels" 
             chart-series="series" 
             chart-options="options"
+            chart-colours="colours";
             chart-dataset-override="datasetOverride" 
             chart-click="onClick"
             chart-height="100">

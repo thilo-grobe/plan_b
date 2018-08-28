@@ -9,16 +9,22 @@
         <script><![CDATA[var ScenarioCalculator = Class.create();
 ScenarioCalculator.prototype = {
 	initialize: function() {
+
 	},
 
-
+	
+	//DOES NOT WORK YET
 	calculate: function(scenario_id) {
+
+		var rundemo = true;
+		if (rundemo) { return this._demo(); }
+
 
 		var result = {};
 		result.messages = [];
-		
+
 		var gr = new GlideRecord('x_0555_plan_b_scenario');
-	
+
 		if(gr.get(input.selectedScenarioId)) {
 			result.state = "success";
 			result = this._addSpendings(gr,result);
@@ -28,30 +34,727 @@ ScenarioCalculator.prototype = {
 			result.state = "error";
 			result.messages.push("Scenario not found or not accessible");
 		}
-		
+
 		return result;
 	},
+
 	
 	_addSpendings: function(gr,result) {
+
 		var spendings = {};
-		spendings.staff = {};
-		spendings.staff.total = {};
-		spendings.staff.total.salaries = 0;
-		
+
+		spendings.components = [];
+
+		var payroll = {
+			"name": "Payroll",
+			"total": 0,
+			"monthly": this._initArray(),
+			"components": []
+		};
+
+		var pr_component = {};
+
+		//get all employees 
 		var e = new GlideRecord('x_0555_plan_b_m2m_employees_scenarios');
-		e.get('scenario', gr.sys_id.toString());
-		
-		return result;
+		e.addQuery('scenario', gr.sys_id.toString());
+		e.query();
+		while (e.next()) {
+			
+			//get Employee Name
+			pr.component.name = e.employee.name.toString();
+			
+			pr_component = {
+				"name": e.employee.name.toString(),
+				"total": {
+					"value" : 0,
+					"displayValue" : ''
+				},
+				"monthly": {
+					"value" : this._initArray(),
+					"displayValue" : this._initArray(),
+				},
+				"components": []
+			};
+
+			var salary = {
+				"name": "Salary",
+				"total": {
+					"value" : 0,
+					"displayValue" : ''
+				},
+				"monthly": {
+					"value" : this._initArray(),
+					"displayValue" : this._initArray()
+				},
+			};
+
+			var additionalCost = {
+				"name": "Salary",
+				"total": {
+					"value" : 0,
+					"displayValue" : ''
+				},
+				"monthly": {
+					"value" : this._initArray(),
+					"displayValue" : this._initArray()
+				},
+			};
+
+
+			// 		"additionalCost": {
+			// 			"total": 0,
+			// 				"monthly": this._initArray(),
+			// 					"components": {
+			// 						"healthInsurance": this._initArray(),
+			// 							"nursingCareInsurance": this._initArray(),
+			// 								"retirementInsurance": this._initArray(),
+			// 									"unemploymentInsurance":this._initArray(),
+			// 										"levy1": this._initArray(),
+			// 											"levy2": this._initArray(),
+			// 												"levy3": this._initArray()
+			// 					}
+			// 		}
+			// 	};
+			//create salary value array
+			for (i = parseInt(e.onboarding); i < this._initArray().length; i++) {
+				salary.monthly[i] = e.new_monthly_salary.getCurrencyValue();
+				salary.total = parseInt(salary.total) + parseInt(salary.monthly[i]);
+			}
+
+			//create the other costs (always based on the total calculated yearly salary)
+			o = this._calcSocialAndLevies(gr, o, this._initArray().length - parseInt(e.onboarding));
+
+			//add to total
+			spendings.staff.salaries.total =          parseInt(spendings.staff.salaries.total)+parseInt(o.salary.total);
+			spendings.staff.salaries.monthly =        this._sumFloatArray(spendings.staff.salaries.monthly, o.salary.monthly);
+			spendings.staff.additionalCost.total =    parseInt(spendings.staff.additionalCost.total)+parseInt(o.additionalCost.total);
+			spendings.staff.additionalCost.monthly =  this._sumFloatArray(spendings.staff.additionalCost.monthly, o.additionalCost.monthly);
+
+
+
+			spendings.staff.individuals.push(o);
+		} 
+		return spendings;
 	},
-	
+
+	_calcSocialAndLevies: function(scenarioGr, o, months) {
+
+		//get ceilings
+		var cegr = new GlideRecord('x_0555_plan_b_earnings_ceiling');
+		cegr.addQuery('year',scenarioGr.year.toString());
+		cegr.setLimit(1);
+		cegr.query();
+		if (!cegr.next()) {
+			gs.warn('Caution: No Earnings Ceiling Record found for scenario year');
+			return;
+		}
+
+		//get social securites
+		var sogr = new GlideRecord('x_0555_plan_b_social_security_contributions');
+		sogr.addQuery('year',scenarioGr.year.toString());
+		sogr.setLimit(1);
+		sogr.query();
+		if (!sogr.next()) {
+			gs.warn('Caution: No Social Security Record found for scenario year');
+			return;
+		}
+
+		//get levies
+		var legr = new GlideRecord('x_0555_plan_b_levies');
+		legr.addQuery('year',scenarioGr.year.toString());
+		legr.setLimit(1);
+		legr.query();
+		if (!legr.next()) {
+			gs.warn('Caution: No Levy Record found for scenario year');
+			return;
+		}
+
+
+		//*****Block of rad redundancies :) ***************************
+
+		//********************************
+		//calculate retirement insurance 
+		var retirementInsuranceTotal = 0;
+		if(o.salary.total <= cegr.retirement_insurance_ceiling) {
+			//under ceiling
+			retirementInsuranceTotal = parseFloat(o.salary.total)*sogr.retirement_insurance/100;
+		} else {
+			//over ceiling
+			retirementInsuranceTotal = parseFloat(cegr.retirement_insurance_ceiling)*sogr.retirement_insurance/100;
+		} 
+		//generate monthly breakdowns
+		o.additionalCost.components.retirementInsurance = this._distribute(retirementInsuranceTotal, this._initArray().length - months);
+		//add to "total additional cost" properties
+		o.additionalCost.total = Math.floor(parseFloat(o.additionalCost.total)+parseFloat(retirementInsuranceTotal));
+		o.additionalCost.monthly = this._sumFloatArray(o.additionalCost.monthly  ,o.additionalCost.components.retirementInsurance);
+
+		//********************************
+		//calculate unemployment insurance 
+		var unemploymentInsuranceTotal = 0;
+		if(o.salary.total <= cegr.retirement_insurance_ceiling) {
+			//under ceiling
+			unemploymentInsuranceTotal = parseFloat(o.salary.total)*sogr.unemployment_insurance/100;
+		} else {
+			//over ceiling
+			unemploymentInsuranceTotal = parseFloat(cegr.retirement_insurance_ceiling)*sogr.unemployment_insurance/100;
+		} 
+		//generate monthly breakdowns
+		o.additionalCost.components.unemploymentInsurance = this._distribute(unemploymentInsuranceTotal, this._initArray().length - months);
+		//add to "total additional cost" properties
+		o.additionalCost.total = Math.floor(parseFloat(o.additionalCost.total)+parseFloat(unemploymentInsuranceTotal));
+		o.additionalCost.monthly = this._sumFloatArray(o.additionalCost.monthly  ,o.additionalCost.components.unemploymentInsurance);
+
+		//********************************
+		//calculate health insurance
+		var healthInsuranceTotal = 0;
+		if(o.salary.total <= cegr.health_insurance_ceiling) {
+			//under ceiling
+			healthInsuranceTotal = parseFloat(o.salary.total)*sogr.health_insurance/100;
+		} else {
+			//over ceiling
+			healthInsuranceTotal = parseFloat(cegr.health_insurance_ceiling)*sogr.health_insurance/100;
+		} 
+		//generate monthly breakdown
+		o.additionalCost.components.healthInsurance = this._distribute(healthInsuranceTotal, this._initArray().length - months);
+		//add to "total additional cost" properties
+		o.additionalCost.total = Math.floor(parseFloat(o.additionalCost.total)+parseFloat(healthInsuranceTotal));
+		o.additionalCost.monthly = this._sumFloatArray(o.additionalCost.monthly  ,o.additionalCost.components.healthInsurance);
+
+		//********************************
+		//calculate nursing care insurance
+		var nursingCareTotal = 0;
+		if(o.salary.total <= cegr.health_insurance_ceiling) {
+			//under ceiling
+			nursingCareTotal = parseFloat(o.salary.total)*sogr.nursing_care_insurance/100;
+		} else {
+			//over ceiling
+			nursingCareTotal = parseFloat(cegr.health_insurance_ceiling)*sogr.nursing_care_insurance/100;
+		} 
+		//generate monthly breakdown
+		o.additionalCost.components.nursingCareInsurance = this._distribute(nursingCareTotal, this._initArray().length - months);
+		//add to "total additional cost" properties
+		o.additionalCost.total = Math.floor(parseFloat(o.additionalCost.total)+parseFloat(nursingCareTotal));
+		o.additionalCost.monthly = this._sumFloatArray(o.additionalCost.monthly  ,o.additionalCost.components.nursingCareInsurance);
+
+		//********************************
+		//calculate levy1
+		var levy1Total = 0;
+		if(o.salary.total <= cegr.retirement_insurance_ceiling) {
+			//under ceiling
+			levy1Total = parseFloat(o.salary.total)*legr.levy_1_percent/100;
+		} else {
+			//over ceiling
+			levy1Total = parseFloat(cegr.retirement_insurance_ceiling)*legr.levy_1_percent/100;
+		} 
+		//generate monthly breakdowns
+		o.additionalCost.components.levy1 = this._distribute(levy1Total, this._initArray().length - months);
+		//add to "total additional cost" properties
+		o.additionalCost.total = Math.floor(parseFloat(o.additionalCost.total)+parseFloat(levy1Total));
+		o.additionalCost.monthly = this._sumFloatArray(o.additionalCost.monthly  ,o.additionalCost.components.levy1);
+
+		//********************************
+		//calculate levy2
+		var levy2Total = 0;
+		if(o.salary.total <= cegr.retirement_insurance_ceiling) {
+			//under ceiling
+			levy2Total = parseFloat(o.salary.total)*legr.levy_2_percent/100;
+		} else {
+			//over ceiling
+			levy2Total = parseFloat(cegr.retirement_insurance_ceiling)*legr.levy_2_percent/100;
+		} 
+		//generate monthly breakdowns
+		o.additionalCost.components.levy2 = this._distribute(levy2Total, this._initArray().length - months);
+		//add to "total additional cost" properties
+		o.additionalCost.total = Math.floor(parseFloat(o.additionalCost.total)+parseFloat(levy2Total));
+		o.additionalCost.monthly = this._sumFloatArray(o.additionalCost.monthly  ,o.additionalCost.components.levy2);
+
+		//********************************
+		//calculate levy1
+		var levy3Total = 0;
+		if(o.salary.total <= cegr.retirement_insurance_ceiling) {
+			//under ceiling
+			levy3Total = parseFloat(o.salary.total)*legr.levy_3_percent/100;
+		} else {
+			//over ceiling
+			levy3Total = parseFloat(cegr.retirement_insurance_ceiling)*legr.levy_3_percent/100;
+		} 
+		//generate monthly breakdowns
+		o.additionalCost.components.levy3 = this._distribute(levy3Total, this._initArray().length - months);
+
+		//add to "total additional cost" properties
+		o.additionalCost.total = Math.floor(parseFloat(o.additionalCost.total)+parseFloat(levy3Total));
+		o.additionalCost.monthly = this._sumFloatArray(o.additionalCost.monthly  ,o.additionalCost.components.levy3);
+
+		//return
+		return o;
+	},
+
+
+	_sumFloatArray: function(ar1, ar2) {	
+		gs.debug('Summing two float arrays: '+ar1+' AND '+ar2);
+		for (i = 0; i < this._initArray().length; i++) {	
+			gs.debug('Index '+i+': '+parseInt(ar1[i])+' + '+parseInt(ar2[i])+' = '+(parseInt(ar1[i])+parseInt(ar2[i])));
+			ar1[i] = parseInt(ar1[i])+parseInt(ar2[i]);
+		}		
+		return ar1;
+	},		 
+
 	_addEarnings: function(gr,result) {
 		return result;
 	},
-	
+
 	_addBottomLineCalculation: function(gr,result) {
 		return result;
 	},
+
+	_demo: function() {
+
+		return {
+			"spendings": {
+				"total": {
+					"value": "157707",
+					"displayValue": "157.707,00 €"
+				},
+				"monthly": {
+					"value": [
+						0,
+						4000,
+						4000,
+						14000,
+						14000,
+						14000,
+						14000,
+						14000,
+						14000,
+						14000,
+						14000,
+						14000
+					],
+					"displayValue": [
+						"0,00 €",
+						"4.000,00 €",
+						"4.000,00 €",
+						"14.000,00 €",
+						"14.000,00 €",
+						"14.000,00 €",
+						"14.000,00 €",
+						"14.000,00 €",
+						"14.000,00 €",
+						"14.000,00 €",
+						"14.000,00 €",
+						"14.000,00 €"
+					]
+				},
+				"components": [
+					{
+						"name": "Payroll",
+						"total": {
+							"value": "134000",
+							"displayValue": "134.000,00 €"
+						},
+						"monthly": {
+							"value": [
+								0,
+								4000,
+								4000,
+								14000,
+								14000,
+								14000,
+								14000,
+								14000,
+								14000,
+								14000,
+								14000,
+								14000
+							],
+							"displayValue": [
+								"0,00 €",
+								"4.000,00 €",
+								"4.000,00 €",
+								"14.000,00 €",
+								"14.000,00 €",
+								"14.000,00 €",
+								"14.000,00 €",
+								"14.000,00 €",
+								"14.000,00 €",
+								"14.000,00 €",
+								"14.000,00 €",
+								"14.000,00 €"
+							]
+						}
+					},
+					{
+						"name": "Payroll Fringe",
+						"total": {
+							"value": "23707",
+							"displayValue": "23.707,00 €"
+						},
+						"monthly": {
+							"value": [
+								0,
+								896,
+								896,
+								2453,
+								2453,
+								2453,
+								2453,
+								2453,
+								2453,
+								2453,
+								2453,
+								2453
+							],
+							"displayValue": [
+								"0,00 €",
+								"896,00 €",
+								"896,00 €",
+								"2.453,00 €",
+								"2.453,00 €",
+								"2.453,00 €",
+								"2.453,00 €",
+								"2.453,00 €",
+								"2.453,00 €",
+								"2.453,00 €",
+								"2.453,00 €",
+								"2.453,00 €",
+							]
+						}
+					}
+				]
+			},
+
+			"earnings": 
+			{
+				"total": {
+					"value": "490000",
+					"displayValue": "490.000,00 €"
+				},
+				"monthly": {
+					"value": [
+						0,
+						30000,
+						30000,
+						30000,
+						50000,
+						50000,
+						50000,
+						50000,
+						50000,
+						50000,
+						50000,
+						50000,
+					],
+					"displayValue": [
+						"0,00 €",
+						"30.000,00 €",
+						"30.000,00 €",
+						"50.000,00 €",
+						"50.000,00 €",
+						"50.000,00 €",
+						"50.000,00 €",
+						"50.000,00 €",
+						"50.000,00 €",
+						"50.000,00 €",
+						"50.000,00 €",
+						"50.000,00 €"
+					]
+				},
+				"components": [
+					{
+						"name": "Billable Hours",
+						"total": {
+							"value": "490000",
+							"displayValue": "490.000,00 €"
+						},
+						"monthly": {
+							"value": [
+								0,
+								30000,
+								30000,
+								30000,
+								50000,
+								50000,
+								50000,
+								50000,
+								50000,
+								50000,
+								50000,
+								50000,
+							],
+							"displayValue": [
+								"0,00 €",
+								"30.000,00 €",
+								"30.000,00 €",
+								"50.000,00 €",
+								"50.000,00 €",
+								"50.000,00 €",
+								"50.000,00 €",
+								"50.000,00 €",
+								"50.000,00 €",
+								"50.000,00 €",
+								"50.000,00 €",
+								"50.000,00 €"
+							]
+						}
+					}
+				]
+			},
+
+			"balance": {
+				"netIncome": {
+					"total": {
+						"value": "300000",
+						"displayValue": "300.000,00 €"
+					},
+					"monthly": {
+						"value": [
+							-10000,
+							-10000,
+							5000,
+							5000,
+							10000,
+							10000,
+							25000,
+							25000,
+							30000,
+							30000,
+							30000,
+							30000
+						],
+						"displayValue": [
+							"-10000,00 €",
+							"-10000,00 €",
+							"5.000,00 €",
+							"5.000,00 €",
+							"10.000,00 €",
+							"10.000,00 €",
+							"25.000,00 €",
+							"25.000,00 €",
+							"30.000,00 €",
+							"30.000,00 €",
+							"30.000,00 €",
+							"30.000,00 €"
+						]
+					},
+				},
+				"depreciations": {
+					"total": {
+						"value": "-2200",
+						"displayValue": "- 2.200,00 €"
+					},
+					"monthly": {
+						"value": [
+							-100,
+							-100,
+							-200,
+							-200,
+							-200,
+							-200,
+							-200,
+							-200,
+							-200,
+							-200,
+							-200,
+							-200
+						],
+						"displayValue": [
+							"- 100,00 €",
+							"- 100,00 €",
+							"- 200,00 €",
+							"- 200,00 €",
+							"- 200,00 €",
+							"- 200,00 €",
+							"- 200,00 €",
+							"- 200,00 €",
+							"- 200,00 €",
+							"- 200,00 €",
+							"- 200,00 €",
+							"- 200,00 €"
+						]
+					},
+				},
+				"operatingIncome": 
+				{
+					"total": {
+						"value": "198000",
+						"displayValue": "198.000,00 €"
+					}
+				},
+				"interests": {
+					"total": {
+						"value": "0",
+						"displayValue": "0 €"
+					},
+					"monthly": {
+						"value": [
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						"displayValue": [
+							"0,00 €",
+							"0,00 €",
+							"0,00 €",
+							"0,00 €",
+							"0,00 €",
+							"0,00 €",
+							"0,00 €",
+							"0,00 €",
+							"0,00 €",
+							"0,00 €",
+							"0,00 €",
+							"0,00 €"
+						]
+					}
+				},
+				"taxes": {
+					"total": {
+						"value": "-92000",
+						"displayValue": "- 92.000,00 €"
+					},
+					"monthly": {
+						"value": [
+							0,
+							-12000,
+							-11000,
+							0,
+							-12000,
+							-11000,
+							0,
+							-12000,
+							-11000,
+							0,
+							-12000,
+							-11000
+						],
+						"displayValue": [
+							"0,00 €",
+							"- 12.000,00 €",
+							"0,00 €",
+							"0,00 €",
+							"- 12.000,00 €",
+							"0,00 €",
+							"0,00 €",
+							"- 12.000,00 €",
+							"0,00 €",
+							"0,00 €",
+							"- 12.000,00 €",
+							"0,00 €"
+						]
+					},
+					"components": [
+						{
+							"name": "Commercial Tax",
+							"total": {
+								"value": "-48000",
+								"displayValue": "- 48.000,00 €"
+							},
+							"monthly": {
+								"value": [
+									0,
+									-12000,
+									0,
+									0,
+									-12000,
+									0,
+									0,
+									-12000,
+									0,
+									0,
+									-12000,
+									0
+								],
+								"displayValue": [
+									"0,00 €",
+									"- 12.000,00 €",
+									"0,00 €",
+									"0,00 €",
+									"- 12.000,00 €",
+									"0,00 €",
+									"0,00 €",
+									"- 12.000,00 €",
+									"0,00 €",
+									"0,00 €",
+									"- 12.000,00 €",
+									"0,00 €"
+								]
+							}
+						},
+						{
+							"name": "Corporate Tax",
+							"total": {
+								"value": "-44000",
+								"displayValue": "- 44.000,00 €"
+							},
+							"monthly": {
+								"value": [
+									0,
+									0,
+									- 11000,
+									0,
+									0,
+									- 11000,
+									0,
+									0,
+									- 11000,
+									0,
+									0,
+									- 11000
+								],
+								"displayValue": [
+									"0,00 €",
+									"0,00 €",
+									"- 11.000,00 €",
+									"0,00 €",
+									"0,00 €",
+									"- 11.000,00 €",
+									"0,00 €",
+									"0,00 €",
+									"- 11.000,00 €",
+									"0,00 €",
+									"0,00 €",
+									"- 11.000,00 €",
+								]
+							}
+						}
+					]
+				},
+				"result": {
+					"total": {
+						"value": "198000",
+						"displayValue": "198.000,00 €"
+					},
+				}
+			}
+		}; 
+	},
 	
+	_initArray: function() {
+		//12 month base period
+		return [0,0,0,0,0,0,0,0,0,0,0,0];	
+	},
+
+	_distribute: function(amount, offset) {
+		//takes a float number and returns an array with the amount distributed over the lenght (minus offset) 
+		var a = this._initArray();
+		var slice = Math.floor(amount/(a.length-offset));	
+		for (i = offset; i < a.length; i++) {
+			a[i] = slice;
+		}
+		return a;
+	},
+
+
+
 
 
 	type: 'ScenarioCalculator'
@@ -60,13 +763,13 @@ ScenarioCalculator.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-08-23 07:51:18</sys_created_on>
         <sys_id>32173e9e4f002300059a417da310c709</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>72</sys_mod_count>
         <sys_name>ScenarioCalculator</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
         <sys_update_name>sys_script_include_32173e9e4f002300059a417da310c709</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-23 10:54:59</sys_updated_on>
+        <sys_updated_on>2018-08-28 21:19:59</sys_updated_on>
     </sys_script_include>
 </record_update>

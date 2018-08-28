@@ -4,14 +4,18 @@
         <client_script><![CDATA[function($scope) {
   /* widget controller */
   var c = this;
-	
+
 	c.change = function(scenario_id){
 		$rootScope.$broadcast('scenario_changed', scenario_id);
 		console.log('scenario changed to: '+scenario_id);
 	}	
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>.min135 {
+
+  min-height: 135px;
+
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -46,29 +50,29 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-08-20 11:51:56</sys_created_on>
         <sys_id>bf63dc654fc02300059a417da310c783</sys_id>
-        <sys_mod_count>68</sys_mod_count>
+        <sys_mod_count>77</sys_mod_count>
         <sys_name>Scenario Editor</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
         <sys_update_name>sp_widget_bf63dc654fc02300059a417da310c783</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-22 12:58:29</sys_updated_on>
+        <sys_updated_on>2018-08-28 21:51:54</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default">
   <div class="panel-heading">
     <h2 class="h4 panel-title">
-      <fa class="m-r-sm fa fa-tasks" />${Scenario}
+      <fa class="m-r-sm fa fa-star" />${Scenario}
     </h2>
   </div>
-  <div class="panel-body">
+  <div class="panel-body min135">
     <div class="form-group">
-      <label for="exampleInputEmail1">${Please select a Plan B Scenario}</label>
+      <label for="scenario_select">${Please select a Plan B Scenario}</label>
       <select class="form-control" 
               id="scenario_select" 
               aria-describedby="scenarioSelectHelp"
               ng-model="selectedScenario" 
               ng-options="x.name for x in c.data.scenarios" 
-              ng-change="c.change(selectedScenario.sys_id)">
+              ng-change="c.change(selectedScenario.sys_id)"><option value="">--- Please select a scenario ---</option>
       </select>
       <small id="scenarioSelectHelp" class="form-text text-muted">${List is empty? - Navigate to }<a href="./scenarios">${Scenarios}</a>${ to create your own.}</small>
     </div>

@@ -14,9 +14,9 @@
 }]]></client_script>
         <controller_as>c</controller_as>
         <css>.total {
-  font-size: 130%;
+  font-size: 180%;
   font-weight: bolder;
-  color: $success
+  color: $default
 }
 
 .plan_b_footer {
@@ -29,64 +29,74 @@
         <docs/>
         <field_list/>
         <has_preview>true</has_preview>
-        <id>earnings</id>
+        <id>result</id>
         <internal>false</internal>
         <link/>
-        <name>Earnings</name>
+        <name>Result</name>
         <option_schema/>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
-  /* populate the 'data' object */
-  /* e.g., data.table = $sp.getValue('table'); */
-  if (gs.getProperty('x_0555_plan_b.logging.verbosity') == 'debug') {
-		data.debug = true;
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+	if (gs.getProperty('x_0555_plan_b.logging.verbosity') == 'debug') {
+		data.debug = false;
 	}
-	
-	data.earnings = {};
-	
-	
-	
-	
+  data.result = {};
+
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-08-22 15:41:36</sys_created_on>
-        <sys_id>d72bdfca4f802300059a417da310c77f</sys_id>
-        <sys_mod_count>12</sys_mod_count>
-        <sys_name>Earnings</sys_name>
+        <sys_created_on>2018-08-28 18:17:23</sys_created_on>
+        <sys_id>ff5876484f102300059a417da310c731</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Result</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
-        <sys_update_name>sp_widget_d72bdfca4f802300059a417da310c77f</sys_update_name>
+        <sys_update_name>sp_widget_ff5876484f102300059a417da310c731</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-28 19:30:55</sys_updated_on>
-        <template><![CDATA[<div ng-if="c.result" class="panel panel-success">
+        <sys_updated_on>2018-08-28 19:31:33</sys_updated_on>
+        <template><![CDATA[<div ng-if="c.result" class="panel panel-default">
 
   <div class="panel-heading">
     <h2 class="h4 panel-title">
-      <fa class="m-r-sm fa fa-info-circle" />${12 month Earnings}
+      <fa class="m-r-sm fa fa-info-circle" />${Result}
     </h2>
   </div>
-
   <table class="table">
     <tr>
-      <th>Earnings Type</th>
+      <th></th>
       <th><span class="pull-right">Amount</span></th>
     </tr>
-
-    <tr ng-repeat="x in c.result.earnings.components">
-      <td>{{x.name}}</td>
-      <td><span class="pull-right">{{x.total.displayValue}}</span></td>
+    <tr>
+      <td>Net Income</td>
+      <td><span class="pull-right">{{c.result.balance.netIncome.total.displayValue}}</span></td>
+    </tr>
+    <tr>
+      <td>Depreciations</td>
+      <td><span class="pull-right">{{c.result.balance.depreciations.total.displayValue}}</span></td>
+    </tr>
+    <tr>
+      <td>Taxes</td>
+      <td><span class="pull-right">{{c.result.balance.taxes.total.displayValue}}</span></td>
+    </tr>
+    <tr>
+      <td>Operating Income</td>
+      <td><span class="pull-right">{{c.result.balance.operatingIncome.total.displayValue}}</span></td>
+    </tr>
+    <tr>
+      <td>Interests</td>
+      <td><span class="pull-right">{{c.result.balance.interests.total.displayValue}}</span></td>
     </tr>
 
   </table>
 
   <div class="panel-footer plan_b_footer">
-    <span class="pull-right">Total 1yr Earnings:&nbsp;
+    <span class="pull-right">Final Result:&nbsp;
       <span class="total">
-        {{c.result.earnings.total.displayValue}}
+        {{c.result.balance.result.total.displayValue}}
       </span>
     </span>
   </div>
