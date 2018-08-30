@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope) {
+        <client_script><![CDATA[function($uibModal, $scope) {
 	/* widget controller */
 	var c = this;
 
+	
+	
+	c.openEditModal = function() {
+		c.modalInstance = $uibModal.open({
+			templateUrl: 'editModalTemplate',
+			scope: $scope
+		});
+	}
+ 
+	c.closeModal = function() {
+		c.modalInstance.close();
+	}
+
+	c.del = function() {
+		c.modalInstance = $uibModal.open({
+			templateUrl: 'delModalTemplate',
+			scope: $scope
+		});
+	}
+
+	
+	
 	$scope.$on('scenario_changed', function(event, scenario_id) {	
 		c.data.selectedScenarioId = scenario_id;
 		if (scenario_id != '') {
@@ -95,14 +117,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-08-22 13:07:30</sys_created_on>
         <sys_id>4ee7f6864f402300059a417da310c7b4</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>57</sys_mod_count>
         <sys_name>Scenario Details</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
         <sys_update_name>sp_widget_4ee7f6864f402300059a417da310c7b4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-28 22:03:01</sys_updated_on>
+        <sys_updated_on>2018-08-30 10:42:40</sys_updated_on>
         <template><![CDATA[<div ng-if="data.scenario.name" class="panel panel-default">
   <div class="panel-heading">
     <h2 class="h4 panel-title">
@@ -130,12 +152,12 @@
         </h5>
       </div>
       <div class="col-md-3">
-         <h5>
+        <h5>
           <b>${Utilization}</b>
         </h5>
       </div>
       <div class="col-md-3">
-       <h5>
+        <h5>
           <b>${Other}</b>
         </h5>
       </div>
@@ -151,11 +173,45 @@
 
   </div>
   <div ng-if="c.show" class="panel-footer">
-    <button ng-click="c.edit()" class="btn btn-primary m10"><fa class="fa fa-edit m10" />${Edit}</button>
+    <button ng-click="c.openEditModal()" class="btn btn-primary m10"><fa class="fa fa-edit m10" />${Edit}</button>
     <button ng-click="c.del()" class="btn btn-primary"><fa class="fa fa-trash m10" />${Delete}</button>
     <button ng-click="c.calculate()" class="btn btn-warning pull-right"><fa class="fa-magic m10" />${Calculate}</button>
 
   </div>
+
+
+  <script type="text/ng-template" id="editModalTemplate">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">Edit Scenario</h4>
+    </div>
+		<div class="panel-body wrapper-xl">
+			ToDo
+    </div>
+		<div class="panel-footer text-right">
+			<button class="btn btn-primary" ng-click="c.closeModal()">${Close}</button>
+    </div>
+    </div>
+  </script>
+
+  <script type="text/ng-template" id="delModalTemplate">
+	<div class="panel panel-danger">
+		<div class="panel-heading">
+			<h4 class="panel-title">Delete Scenario</h4>
+    </div>
+		<div class="panel-body wrapper-xl">
+			ToDo
+    </div>
+		<div class="panel-footer text-right">
+			<button class="btn btn-danger ng-click="c.closeModal()">${Delete}</button>
+    </div>
+    </div>
+  </script>
+
+</div>
+
+</div>
+
 ]]></template>
     </sp_widget>
 </record_update>
