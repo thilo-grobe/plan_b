@@ -6,20 +6,20 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>false</action_update>
-        <active>true</active>
+        <active>false</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
         <collection>x_0555_plan_b_m2m_employees_scenarios</collection>
-        <condition/>
+        <condition>true</condition>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
         <name>Inherit Current Salary</name>
-        <order>100</order>
+        <order>1000</order>
         <priority>100</priority>
         <rest_method/>
         <rest_method_text/>
@@ -31,7 +31,7 @@
 
 	// Add your code here
 	current.new_monthly_salary.setValue(current.employee.monthly_salary.getCurrencyString());
-	
+	current.update();
 	
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -40,7 +40,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a6be53da4f802300059a417da310c77b</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Inherit Current Salary</sys_name>
         <sys_overrides/>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
@@ -48,9 +48,9 @@
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
         <sys_update_name>sys_script_a6be53da4f802300059a417da310c77b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-23 10:42:14</sys_updated_on>
+        <sys_updated_on>2018-09-10 07:37:34</sys_updated_on>
         <template/>
-        <when>before</when>
+        <when>async</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=a6be53da4f802300059a417da310c77b"/>
 </record_update>

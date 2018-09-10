@@ -42,9 +42,12 @@
         </element>
         <element label="Scenario" max_length="32" name="scenario" reference="x_0555_plan_b_scenario" type="reference"/>
         <index name="index">
-            <element name="scenario"/>
+            <element name="company_car"/>
         </index>
         <index name="index2">
+            <element name="scenario"/>
+        </index>
+        <index name="index3">
             <element name="employee"/>
         </index>
     </element>

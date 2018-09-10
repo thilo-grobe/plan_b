@@ -4,6 +4,6 @@
         <element label="First Name" max_length="255" name="first_name" type="string_full_utf8"/>
         <element label="Last Name" max_length="255" name="last_name" type="string_full_utf8"/>
         <element label="Current Monthly Salary" max_length="20" name="monthly_salary" type="price"/>
-        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.first_name+' '+current.last_name;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Name" max_length="255" name="name" type="string_full_utf8" virtual="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#10;&#10;&#9;// Add your code here&#10;&#9;return current.first_name+' '+current.last_name;  // return the calculated value&#10;&#10;})(current);" label="Name" max_length="255" name="name" type="string_full_utf8" virtual="true"/>
     </element>
 </database>

@@ -53,15 +53,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-08-20 12:18:53</sys_created_on>
-        <sys_id>8a9898294fc02300059a417da310c7ff</sys_id>
+        <sys_id>f14f5b04db202300b067fe1b68961914</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Average Travel Cost per Billable Day</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
         <sys_update_name>sys_dictionary_x_0555_plan_b_scenario_average_travel_cost_per_billable_day</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-20 12:18:53</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-09-10 07:23:15</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
