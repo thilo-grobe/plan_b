@@ -92,6 +92,9 @@
 			data.scenario.number = gr.getDisplayValue('number');
 			data.scenario.name = gr.getDisplayValue('name');
 			data.scenario.employees = [];
+			data.scenario.rates = [];
+			data.scenario.utilizations = [];
+			data.scenario.cars = [];
 			//List Employees
 			var gr2 = new GlideRecord('x_0555_plan_b_m2m_employees_scenarios');
 			gr2.addQuery('scenario', gr.sys_id);
@@ -100,6 +103,9 @@
 			//data.scenario.numberOfEmployees = gr2.getRowCount();
 			while (gr2.next()) {
 				data.scenario.employees.push(gr2.employee.name.toString());
+				data.scenario.rates.push(gr2.hourly_rate.getDisplayValue());
+				data.scenario.utilizations.push(gr2.billable_utilization.getDisplayValue());
+				data.scenario.cars.push(gr2.company_car.getDisplayValue());
 			}
 		}
 	}
@@ -117,14 +123,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-08-22 13:07:30</sys_created_on>
         <sys_id>4ee7f6864f402300059a417da310c7b4</sys_id>
-        <sys_mod_count>57</sys_mod_count>
+        <sys_mod_count>73</sys_mod_count>
         <sys_name>Scenario Details</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
         <sys_update_name>sp_widget_4ee7f6864f402300059a417da310c7b4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-30 10:42:40</sys_updated_on>
+        <sys_updated_on>2018-11-15 13:46:02</sys_updated_on>
         <template><![CDATA[<div ng-if="data.scenario.name" class="panel panel-default">
   <div class="panel-heading">
     <h2 class="h4 panel-title">
@@ -139,36 +145,43 @@
       </h4>
 
 
+      <div class="row">
+        <div class="col-md-3">
+          <h5>
+            <b>${Employees}</b>
+          </h5>
+          <div ng-repeat="x in c.data.scenario.employees track by $index"><fa class="m-r-sm fa fa-user" />{{x}}</div>
+        </div>
+        <div class="col-md-3">
+          <h5>
+            <b>${Hourly Rate}</b>
+          </h5>
+          <div ng-repeat="y in c.data.scenario.rates track by $index"><fa class="m-r-sm fa fa-eur" />{{y}}</div>
 
-      <div class="col-md-3">
-        <h5>
-          <b>${Employees}</b>
-        </h5>
-        <div ng-repeat="x in c.data.scenario.employees"><fa class="m-r-sm fa fa-user" />{{x}}</div>
-      </div>
-      <div class="col-md-3">
-        <h5>
-          <b>${Avg. Pricing}</b>
-        </h5>
-      </div>
-      <div class="col-md-3">
-        <h5>
-          <b>${Utilization}</b>
-        </h5>
-      </div>
-      <div class="col-md-3">
-        <h5>
-          <b>${Other}</b>
-        </h5>
+        </div>
+        <div class="col-md-3">
+          <h5>
+            <b>${Utilization}</b>
+          </h5>
+          <div ng-repeat="z in c.data.scenario.utilizations track by $index"><fa class="m-r-sm fa fa-percent" />{{z}}</div>
+
+        </div>
+        <div class="col-md-3">
+          <h5>
+            <b>${Company Car}</b>
+          </h5>
+          <div ng-repeat="e in c.data.scenario.cars track by $index"><fa class="m-r-sm fa fa-car" />{{e}}</div>
+
+        </div>
       </div>
     </div>
-
-
-    <div ng-if='data.debug'>
-      <h4>
-        Debug Info Data
-      </h4>
-      <pre>{{c.data.scenario | json}}</pre>
+    <div class="row">
+      <div class="col-md-12" ng-if='data.debug'>
+        <h4>
+          Debug Info Data
+        </h4>
+        <pre>{{c.data.scenario | json}}</pre>
+      </div>
     </div>
 
   </div>
