@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="e1a6a3554f402300059a417da310c76f" sys_domain="global" table="x_0555_plan_b_employee" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.begin_split</element>
+            <element>name</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 08:47:56</sys_created_on>
-            <sys_id>e85923d54f402300059a417da310c7ab</sys_id>
+            <sys_created_on>2018-11-15 13:12:20</sys_created_on>
+            <sys_id>7928e869db31230075042fb74896190c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_employee" sys_domain="global" view="Default view">e1a6a3554f402300059a417da310c76f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 08:47:56</sys_updated_on>
+            <sys_updated_on>2018-11-15 13:12:20</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-15 13:12:20</sys_created_on>
+            <sys_id>3128e869db31230075042fb74896190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_employee" sys_domain="global" view="Default view">e1a6a3554f402300059a417da310c76f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-15 13:12:20</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>first_name</element>
-            <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 08:47:56</sys_created_on>
-            <sys_id>6c5923d54f402300059a417da310c7ab</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_employee" sys_domain="global" view="Default view">e1a6a3554f402300059a417da310c76f</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 08:47:56</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>start_date</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 08:47:56</sys_created_on>
-            <sys_id>ec5923d54f402300059a417da310c7ab</sys_id>
+            <sys_created_on>2018-11-15 13:12:20</sys_created_on>
+            <sys_id>b128e869db31230075042fb74896190d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_employee" sys_domain="global" view="Default view">e1a6a3554f402300059a417da310c76f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 08:47:56</sys_updated_on>
+            <sys_updated_on>2018-11-15 13:12:20</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>end_date</element>
+            <element>last_name</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 08:47:56</sys_created_on>
-            <sys_id>605923d54f402300059a417da310c7ac</sys_id>
+            <sys_created_on>2018-11-15 13:12:20</sys_created_on>
+            <sys_id>3528e869db31230075042fb74896190d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_employee" sys_domain="global" view="Default view">e1a6a3554f402300059a417da310c76f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 08:47:56</sys_updated_on>
+            <sys_updated_on>2018-11-15 13:12:20</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,85 +60,57 @@
             <element>.split</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 08:47:56</sys_created_on>
-            <sys_id>e05923d54f402300059a417da310c7ac</sys_id>
+            <sys_created_on>2018-11-15 13:12:20</sys_created_on>
+            <sys_id>b528e869db31230075042fb74896190d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_employee" sys_domain="global" view="Default view">e1a6a3554f402300059a417da310c76f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 08:47:56</sys_updated_on>
+            <sys_updated_on>2018-11-15 13:12:20</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>last_name</element>
+            <element>monthly_salary</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 08:47:56</sys_created_on>
-            <sys_id>645923d54f402300059a417da310c7ac</sys_id>
+            <sys_created_on>2018-11-15 13:12:20</sys_created_on>
+            <sys_id>3928e869db31230075042fb74896190d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_employee" sys_domain="global" view="Default view">e1a6a3554f402300059a417da310c76f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 08:47:56</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>monthly_salary</element>
-            <position>6</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 08:47:56</sys_created_on>
-            <sys_id>e45923d54f402300059a417da310c7ac</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_employee" sys_domain="global" view="Default view">e1a6a3554f402300059a417da310c76f</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 08:47:56</sys_updated_on>
+            <sys_updated_on>2018-11-15 13:12:20</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>active</element>
-            <position>7</position>
+            <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 08:47:56</sys_created_on>
-            <sys_id>685923d54f402300059a417da310c7ac</sys_id>
+            <sys_created_on>2018-11-15 13:12:20</sys_created_on>
+            <sys_id>b928e869db31230075042fb74896190d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_employee" sys_domain="global" view="Default view">e1a6a3554f402300059a417da310c76f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 08:47:56</sys_updated_on>
+            <sys_updated_on>2018-11-15 13:12:20</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>8</position>
+            <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 08:47:56</sys_created_on>
-            <sys_id>e85923d54f402300059a417da310c7ac</sys_id>
+            <sys_created_on>2018-11-15 13:12:20</sys_created_on>
+            <sys_id>3d28e869db31230075042fb74896190d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_employee" sys_domain="global" view="Default view">e1a6a3554f402300059a417da310c76f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 08:47:56</sys_updated_on>
+            <sys_updated_on>2018-11-15 13:12:20</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>name</element>
-            <position>9</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-08-20 11:44:17</sys_created_on>
-            <sys_id>ffa1d0654fc02300059a417da310c744</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_0555_plan_b_employee" sys_domain="global" view="Default view">e1a6a3554f402300059a417da310c76f</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-08-20 11:44:17</sys_updated_on>
-            <sys_user/>
-            <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>

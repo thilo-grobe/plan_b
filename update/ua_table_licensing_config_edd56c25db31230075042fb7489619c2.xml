@@ -4,22 +4,22 @@
         <license_condition/>
         <license_model>none</license_model>
         <license_roles/>
-        <name>x_0555_plan_b_levies</name>
+        <name>x_0555_plan_b_earnings_ceiling</name>
         <op_delete>true</op_delete>
         <op_insert>true</op_insert>
         <op_update>true</op_update>
         <owner_condition/>
         <sys_class_name>ua_table_licensing_config</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-08-20 08:30:48</sys_created_on>
-        <sys_id>024f5b04db202300b067fe1b689619a7</sys_id>
+        <sys_created_on>2018-08-20 07:56:29</sys_created_on>
+        <sys_id>edd56c25db31230075042fb7489619c2</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_0555_plan_b_levies</sys_name>
+        <sys_name>x_0555_plan_b_earnings_ceiling</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
-        <sys_update_name>ua_table_licensing_config_024f5b04db202300b067fe1b689619a7</sys_update_name>
+        <sys_update_name>ua_table_licensing_config_edd56c25db31230075042fb7489619c2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-20 08:30:48</sys_updated_on>
+        <sys_updated_on>2018-08-20 07:56:29</sys_updated_on>
     </ua_table_licensing_config>
 </record_update>

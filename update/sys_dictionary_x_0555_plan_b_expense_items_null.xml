@@ -53,7 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-08-20 12:10:58</sys_created_on>
-        <sys_id>b14f5b04db202300b067fe1b68961927</sys_id>
+        <sys_id>f9d5ac25db31230075042fb74896190f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_0555_plan_b_expense_items</sys_name>
         <sys_package display_value="Plan B" source="x_0555_plan_b">dd5d8f914f002300059a417da310c725</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Plan B">dd5d8f914f002300059a417da310c725</sys_scope>
         <sys_update_name>sys_dictionary_x_0555_plan_b_expense_items_NULL</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-09-10 07:23:13</sys_updated_on>
+        <sys_updated_on>2018-11-15 13:02:23</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

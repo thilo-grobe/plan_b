@@ -3,25 +3,25 @@
         <element choice="3" default="0,5" label="Billable Utilization" max_length="40" name="billable_utilization" type="float">
             <choice>
                 <element inactive_on_update="false" label="0%" sequence="1" value="0"/>
-                <element inactive_on_update="false" label="5%" sequence="2" value="0.05"/>
-                <element inactive_on_update="false" label="10%" sequence="3" value="0.1"/>
-                <element inactive_on_update="false" label="15%" sequence="4" value="0.15"/>
-                <element inactive_on_update="false" label="20%" sequence="5" value="0.2"/>
-                <element inactive_on_update="false" label="25%" sequence="6" value="0.25"/>
-                <element inactive_on_update="false" label="30%" sequence="7" value="0.3"/>
-                <element inactive_on_update="false" label="35%" sequence="8" value="0.35"/>
-                <element inactive_on_update="false" label="40%" sequence="9" value="0.4"/>
-                <element inactive_on_update="false" label="45%" sequence="10" value="0.45"/>
-                <element inactive_on_update="false" label="50%" sequence="11" value="0.5"/>
-                <element inactive_on_update="false" label="55%" sequence="12" value="0.55"/>
-                <element inactive_on_update="false" label="60%" sequence="13" value="0.6"/>
-                <element inactive_on_update="false" label="65%" sequence="14" value="0.65"/>
-                <element inactive_on_update="false" label="70%" sequence="15" value="0.7"/>
-                <element inactive_on_update="false" label="75%" sequence="16" value="0.75"/>
-                <element inactive_on_update="false" label="80%" sequence="17" value="0.8"/>
-                <element inactive_on_update="false" label="85%" sequence="18" value="0.85"/>
-                <element inactive_on_update="false" label="90%" sequence="19" value="0.9"/>
-                <element inactive_on_update="false" label="95%" sequence="20" value="0.95"/>
+                <element inactive_on_update="false" label="5%" sequence="2" value="5"/>
+                <element inactive_on_update="false" label="10%" sequence="3" value="10"/>
+                <element inactive_on_update="false" label="15%" sequence="4" value="15"/>
+                <element inactive_on_update="false" label="20%" sequence="5" value="20"/>
+                <element inactive_on_update="false" label="25%" sequence="6" value="25"/>
+                <element inactive_on_update="false" label="30%" sequence="7" value="30"/>
+                <element inactive_on_update="false" label="35%" sequence="8" value="35"/>
+                <element inactive_on_update="false" label="40%" sequence="9" value="40"/>
+                <element inactive_on_update="false" label="45%" sequence="10" value="45"/>
+                <element inactive_on_update="false" label="50%" sequence="11" value="50"/>
+                <element inactive_on_update="false" label="55%" sequence="12" value="55"/>
+                <element inactive_on_update="false" label="60%" sequence="13" value="60"/>
+                <element inactive_on_update="false" label="65%" sequence="14" value="65"/>
+                <element inactive_on_update="false" label="70%" sequence="15" value="70"/>
+                <element inactive_on_update="false" label="75%" sequence="16" value="75"/>
+                <element inactive_on_update="false" label="80%" sequence="17" value="80"/>
+                <element inactive_on_update="false" label="85%" sequence="18" value="85"/>
+                <element inactive_on_update="false" label="90%" sequence="19" value="90"/>
+                <element inactive_on_update="false" label="95%" sequence="20" value="95"/>
                 <element inactive_on_update="false" label="100%" sequence="21" value="1"/>
                 <element inactive_on_update="false" label="1005" sequence="21" value="1"/>
             </choice>
